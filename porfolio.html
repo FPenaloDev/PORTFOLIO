@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Ramón Peñalo Ferrer | Portfolio Profesional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="div-botones-nav">
+            <a href="#home" class="nav-link activo">Inicio</a>
+            <a href="#about" class="nav-link">Presentación</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+        </div>
+    </nav>
+    <main>
+        <!-- Sección Inicio -->
+        <section id="home" class="seccion portada activo">
+            <div class="div-foto">
+                <img src="./recursos/yo.png" alt="Francisco Ramón Peñalo Ferrer">
+            </div>
+            <div class="contenido-presentacion">
+                <div class="intro-foto">
+                    <h1>Francisco Ramón<br>Peñalo Ferrer</h1>
+                    <p class="subtitle">Full Stack Developer</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/FPenaloDev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/FPDev" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:francisco@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="seccion contenedor">
+            <div class="div-descripcion">
+
+                <div class="descripcion activo">
+                    <h2>Sobre Mi</h2>
+                    <p>Soy Francisco Ramón Peñalo Ferrer, un apasionado desarrollador Full Stack con experiencia en la
+                        creación
+                        de soluciones web innovadoras y escalables.</p>
+                    <p>Cuando empecé desde cero a desarrollar en C, como la gran mayoría de programadores, comencé a
+                        cogerle
+                        el gusto, aunque despues cuando pasé a Java todo comenzó a complicarse, incluso llegué a pensar
+                        que
+                        esto no podria ser para mí.</p>
+                    <p>Dos años después, no podria estar mas contento de haber iniciado en cambio, ya que actualmente
+                        manejo
+                        cualquier lenguaje de programación y mi ambición por aprender parece no tener fin.
+                    </p>
+                    <p>Mi lenguaje favorito es Python sin lugar a dudas por su potencia y versatilidad, y combinándolo
+                        con
+                        JavaScript en mi opinión son implacables.</p>
+                    <p>Actualmente he trabajando con Frameworks como React, NodeJS, Angular, Vue, Laravel,.NET y cuanto
+                        más
+                        aprendo, más quiero aprender y más me apasiona la programación.</p>
+                    <p>
+                        Solo deseo poder trabajar con grandes profesionales de los cuales poder aprender y mejorar mis
+                        habilidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="seccion contenedor">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid" id="habilidades-grid"></div>
+        </section>
+
+        <!-- Sección Proyectos Destacados -->
+        <section id="proyectos" class="seccion contenedor">
+            <h2 class="titulo-seccion">Proyectos Destacados</h2>
+            <div class="proyectos-grid" id="proyectos-grid">
+                <!-- Proyectos dinámicos se agregarán aquí -->
+            </div>
+        </section>
+
+        <!-- Secciones de Proyectos Individuales -->
+        <section id="epub" class="seccion contenedor">
+            <h2 class="titulo-seccion">Reproductor EPUB</h2>
+            <div id="rep_epub"></div>
+        </section>
+
+    </main>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

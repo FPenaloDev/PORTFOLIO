@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Contenedor principal */
+.divBurbujas {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+    height: 60vh;
+    min-height: 400px;
+    background-color: #87CEEBb0;
+    border: 10px solid #4682B4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Burbujas animadas */
+.burbuja {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    transform: scale(1);
+}
+
+.burbuja:hover {
+    transform: scale(1.5);
+}
+
+.burbuja.burbuja-titulo:hover {
+    transform: scale(1);
+}
+
+/* Panel de información */
+.panelInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: min(600px, 90%);
+    height: 30%;
+    padding: 20px;
+    background-color: white;
+    border: 0.1px solid #4682B4b0;
+    border-left: 5px solid #4682B4;
+    border-right: none;
+    border-radius: 15px;
+    box-shadow: 10px 8px 32px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* Botón animar */
+.botonAnimar {
+    position: absolute;
+    top: 15.5vh;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    padding: 12px 32px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Burbujas ordenadas por lenguaje */
+.JavaScript {
+    transition: all 0.4s ease-in;
+    left: 55%;
+    top: 10%;
+}
+
+.Python {
+    transition: all 0.4s ease-in;
+    left: 55%;
+    top: 25%;
+}
+
+.Java {
+    transition: all 0.4s ease-in;
+    left: 55%;
+    top: 40%;
+}
+
+.C\+\+ {
+    transition: all 0.4s ease-in;
+    left: 55%;
+    top: 55%;
+}
+
+.Ruby {
+    transition: all 0.4s ease-in;
+    left: 80%;
+    top: 40%;
+}
+
+.PHP {
+    transition: all 0.4s ease-in;
+    left: 80%;
+    top: 55%;
+}
+
+.Swift {
+    transition: all 0.4s ease-in;
+    left: 80%;
+    top: 25%;
+}
+
+.Go {
+    transition: all 0.4s ease-in;
+    left: 80%;
+    top: 10%;
+}
+
+/* Posiciones adicionales */
+.burbuja-posicion-8 {
+    transition: all 0.4s ease-in;
+    left: 50%;
+    top: 60%;
+}
+
+/* Estilo cuando una burbuja es título */
+.burbuja-titulo {
+    top: 8%;
+    left: 25%;
+    background: none;
+    box-shadow: none;
+}
+
+/* Ocultar tabla auxiliar */
+.tablaBurbujas {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .panelInfo {
+        left: 50%;
+        top: 75%;
+        max-width: 70%;
+        width: 100%;
+        height: 20%;
+    }
+}
+
+@media (max-width: 550px) {
+    .burbuja {
+        width: 3em !important;
+        height: 3em !important;
+    }
+
+    .burbuja img {
+        width: 2em !important;
+        height: 2em !important;
+    }
+}
