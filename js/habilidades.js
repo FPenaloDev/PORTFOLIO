@@ -243,7 +243,6 @@ export function inicializarBurbujas(contenedor) {
             `;
             panelInfo.style.opacity = '1';
             let ancho = window.innerWidth;
-            console.log(ancho);
             if(ancho < 768){
 
                 panelInfo.style.transform = 'translate(-50%, -30%) scale(1)';
@@ -303,7 +302,7 @@ export function inicializarBurbujas(contenedor) {
     // ===== Animación =====
     function iniciarAnimacion() {
         let ultimoTiempo = 0;
-        const VELOCIDAD_MAX = 1;
+        const VELOCIDAD_MAX = 0.8;
 
         function animar(tiempoActual) {
             if (!animacionActiva) return; // cortar el bucle

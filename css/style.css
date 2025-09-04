@@ -259,9 +259,14 @@ i:hover {
 
     .descripcion {
         overflow-y: auto;
-        max-width: 72.5%;
+        max-width: 85.5%;
         max-height: 100%;
-        height: 0%;
+        max-height: 80%;
+        margin: 5% auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         padding: 20px 30px;
         font-size: 1.1em;
         transition: all 0.3s ease-in;
@@ -271,20 +276,6 @@ i:hover {
             color: #000000b0;
         }
 
-    }
-
-    .descripcion.activo {
-        max-height: 80%;
-        margin: 5% auto;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .descripcion.oculto {
-        display: none;
-        height: 0%;
     }
 
     .descripcion::-webkit-scrollbar {
@@ -460,10 +451,11 @@ RESPONSIVE
 @media (min-width: 768px) {
     #home.portada {
         .div-foto {
-           background-color: transparent;
+            background-color: transparent;
         }
+
         .contenido-presentacion {
-            top:22%;
+            top: 22%;
         }
     }
 
@@ -473,6 +465,14 @@ RESPONSIVE
 }
 
 @media (min-width: 1024px) {
+    .portada {
+        .div-foto {
+            img {
+                max-width:40% !important;
+            }
+        }
+    }
+
     .proyectos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
