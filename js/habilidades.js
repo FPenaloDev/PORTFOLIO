@@ -110,29 +110,23 @@ export function inicializarBurbujas(contenedor) {
         const contenedorRect = divBurbujas.getBoundingClientRect();
         const filas = Math.ceil(lenguajes.length / columnas);
 
-        // Zona "derecha" o “mitad” donde colocaremos la grilla
-        const anchoDisponible = esMobile
-            ? contenedorRect.width - espaciado * 3
-            : contenedorRect.width * 0.5;
+        // Ajuste para centrar la cuadrícula en el contenedor
+        const anchoTotalGrid = columnas * dimensionesBurbuja.width + (columnas - 1) * espaciado;
+        const altoTotalGrid = filas * dimensionesBurbuja.height + (filas - 1) * espaciado;
 
-        // Ajustes visuales (opcionales)
-        tablaBurbujas.style.display = 'grid';
-        tablaBurbujas.style.gridTemplateColumns = `repeat(${columnas}, 1fr)`;
-        tablaBurbujas.style.width = esMobile ? '65%' : '60%';
-        tablaBurbujas.style.position = 'absolute';
-        tablaBurbujas.style.right = esMobile ? '5%' : '20px';
+        // Calcular el punto de inicio para centrar la cuadrícula
+        const xInicio = (contenedorRect.width - anchoTotalGrid) / 2;
+        const yInicio = (contenedorRect.height - altoTotalGrid) / 2;
 
         posicionesGrid = [];
-        const anchoColumna = (anchoDisponible - (espaciado * (columnas + 1))) / columnas;
-
         for (let i = 0; i < lenguajes.length; i++) {
             const fila = Math.floor(i / columnas);
             const columna = i % columnas;
-            const xBase = contenedorRect.width - anchoDisponible + (columna * (anchoColumna + espaciado)) + espaciado + 70;
-            const altoTotal = filas * (dimensionesBurbuja.height + espaciado);
-            const yBase = (contenedorRect.height - altoTotal) / 2 + (fila * (dimensionesBurbuja.height + espaciado));
-
-            posicionesGrid.push({ x: xBase, y: Math.max(0, yBase) });
+            
+            const x = xInicio + columna * (dimensionesBurbuja.width + espaciado);
+            const y = yInicio + fila * (dimensionesBurbuja.height + espaciado);
+            
+            posicionesGrid.push({ x, y });
         }
     }
 
@@ -248,7 +242,15 @@ export function inicializarBurbujas(contenedor) {
                 <p style="margin: auto; line-height: 1.6; color: #333">${lenguaje.descripcion}</p>
             `;
             panelInfo.style.opacity = '1';
-            panelInfo.style.transform = 'translate(-50%, -50%) scale(1)';
+            let ancho = window.innerWidth;
+            console.log(ancho);
+            if(ancho < 768){
+
+                panelInfo.style.transform = 'translate(-50%, -30%) scale(1)';
+            } else {
+                panelInfo.style.transform = 'translate(-20%, 65%) scale(1)';
+
+            }
             panelInfo.style.pointerEvents = 'auto';
         }, 150);
 

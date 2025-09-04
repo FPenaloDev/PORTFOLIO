@@ -51,7 +51,7 @@
     top: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     width: min(600px, 90%);
-    height: 30%;
+    height: 20%;
     padding: 20px;
     background-color: white;
     border: 0.1px solid #4682B4b0;
