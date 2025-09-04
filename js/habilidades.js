@@ -81,7 +81,7 @@ export function inicializarBurbujas(contenedor) {
         const alto = divBurbujas.clientHeight || 0;
 
         const w = Math.min(80, ancho * 0.15);
-        dimensionesBurbuja.width = Math.max(40, w); // límites razonables
+        dimensionesBurbuja.width = Math.max(70, w); // límites razonables
         dimensionesBurbuja.height = dimensionesBurbuja.width;
 
         const esMobile = ancho < 500;
@@ -139,7 +139,7 @@ export function inicializarBurbujas(contenedor) {
             info.x = pos.x;
             info.y = pos.y;
             el.style.left = `${pos.x}px`;
-            el.style.top = `${pos.y}px`;
+            el.style.top = `${pos.y - 80}px`;
         });
     }
 
