@@ -370,7 +370,9 @@ i:hover {
 
 #proyectos {
     h2 {
+        margin-top: 40px;
         margin-left: 10%;
+        margin-bottom: 19.920px;
     }
 }
 
@@ -476,13 +478,4 @@ RESPONSIVE
     .proyectos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-#rep_epub {
-    border: 3px solid #0078d4;
-    background-color: #ffffffb0;
-    width: 80%;
-    height: 80%;
-    border-radius: 10px;
-    margin: auto;
 }

@@ -63,11 +63,12 @@ proyectos.forEach(project => {
         <div class="project-info">
             <h3 class="project-title">${project.title}</h3>
             <p class="project-description">${project.description}</p>
-            <a href="${project.link}" class="project-link">Ver Proyecto</a>
+            <a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
         </div>
     `;
     proyectosGrid.appendChild(projectCard);
 });
+
 
 // Función para manejar el clic en los botones "Ver Proyecto"
 const projectLinks = document.querySelectorAll('.project-link');
@@ -77,8 +78,7 @@ projectLinks.forEach(link => {
         event.preventDefault();
         borrarClaseActivo();
 
-        const id_diapositiva = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(id_diapositiva);
-        targetSection.classList.add('activo');
+        const url = link.getAttribute('href');
+        window.open(url, '_blank');
     });
 });
