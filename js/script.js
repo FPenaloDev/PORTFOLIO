@@ -1,5 +1,6 @@
 import { inicializarBurbujas } from './habilidades.js';
 import { proyectos } from './proyectos.js';
+
 const links = document.querySelectorAll('.nav-link');
 const secciones = document.querySelectorAll('.seccion');
 
@@ -22,37 +23,19 @@ links.forEach(link => {
     });
 });
 
+// Inicializar burbujas de habilidades
 const habilidades = document.getElementById('habilidades-grid');
+inicializarBurbujas(habilidades);
 
-inicializarBurbujas(habilidades)
-
-// Función para manejar el acordeón
-function toggleAccordion(clickedTitle) {
-    const allContents = document.querySelectorAll('.habilidades-contenido');
-    const clickedContent = clickedTitle.nextElementSibling;
-    
-    // Si el contenido clickeado no está activo
-    if (!clickedContent.classList.contains('activo')) {
-        // Cerrar todos los contenidos abiertos
-        allContents.forEach(content => {
-            content.classList.remove('activo');
-        });
-        // Abrir el contenido clickeado
-        clickedContent.classList.add('activo');
-    } else {
-        // Si está activo, cerrarlo
-        clickedContent.classList.remove('activo');
-    }
-}
-
-// Agregar event listeners a los títulos
+// Agregar event listeners a los títulos de habilidades (acordeón)
 const categoryTitles = document.querySelectorAll('.habilidades-categoria h2');
 categoryTitles.forEach(title => {
     title.addEventListener('click', () => toggleAccordion(title));
 });
 
-// Código para agregar proyectos dinámicamente
-
+// --------------------------
+// Proyectos dinámicos
+// --------------------------
 const proyectosGrid = document.getElementById('proyectos-grid');
 
 proyectos.forEach(project => {
@@ -67,18 +50,4 @@ proyectos.forEach(project => {
         </div>
     `;
     proyectosGrid.appendChild(projectCard);
-});
-
-
-// Función para manejar el clic en los botones "Ver Proyecto"
-const projectLinks = document.querySelectorAll('.project-link');
-
-projectLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        borrarClaseActivo();
-
-        const url = link.getAttribute('href');
-        window.open(url, '_blank');
-    });
 });
