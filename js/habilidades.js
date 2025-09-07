@@ -1,7 +1,3 @@
-// Archivo: burbujas.js
-// Versión ajustada para que al hacer click en una burbuja se llamen
-// calcularDimensionesResponsivas() y se reorganicen/ajusten en cuadrícula responsiva.
-
 export function inicializarBurbujas(contenedor) {
     // ===== Carga de estilos =====
     const css = document.createElement('link');
@@ -20,7 +16,7 @@ export function inicializarBurbujas(contenedor) {
         { id: 1, nombre: 'JavaScript', descripcion: 'Lenguaje de programación para desarrollo web y aplicaciones interactivas.', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
         { id: 2, nombre: 'Python', descripcion: 'Lenguaje versátil y fácil de leer, usado en ciencia de datos, IA y desarrollo web.', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
         { id: 3, nombre: 'Java', descripcion: 'Lenguaje de propósito general, ampliamente usado en desarrollo empresarial y móvil.', logo: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg' },
-        { id: 4, nombre: 'C++', descripcion: 'Lenguaje de alto rendimiento usado en sistemas embebidos, juegos y aplicaciones de alto nivel.', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg' },
+        { id: 4, nombre: 'C', descripcion: 'Lenguaje de programación de bajo nivel, usado en desarrollo de sistemas operativos.', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg' },
         { id: 5, nombre: 'Ruby', descripcion: 'Lenguaje interpretado enfocado en simplicidad y productividad, usado en desarrollo web.', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg' },
         { id: 6, nombre: 'Go', descripcion: 'Lenguaje moderno desarrollado por Google, eficiente y concurrente.', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg' },
         { id: 7, nombre: 'Swift', descripcion: 'Lenguaje de Apple para el desarrollo de aplicaciones iOS y macOS.', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg' },
